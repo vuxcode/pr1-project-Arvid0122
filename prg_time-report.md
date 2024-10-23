@@ -1,8 +1,5 @@
 # Time Report
 
-> Write about what you have done and how long you have worked on each part of the project.
-
-For example: 
-
-- 2022-10-24 18:00 Worked for 1 hour.
-  - *List the things you have done.*
+- 2024-10-23 15:00 Worked for ca 1 hour.
+  - Started adding some of the basics for the program.
+  - Added two buttons and a score counter that goes up when you press one button.
