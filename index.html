@@ -1,1 +1,18 @@
-<!-- Start writing your project code in this file! -->
+<button id="1"> button 1 </button>
+<button id="2"> button 2 </button>
+<p id="message"> Hello! Please do as the computer tells you </p>
+<p id="score"></p>
+
+<script>
+    var button1 = document.getElementById("1");
+    button1.addEventListener("click",plusScore);
+
+    var score = 0
+    var scoreText = document.getElementById("score")
+    scoreText.textContent = "Score: " + score
+
+    function plusScore() {
+        score++;
+        scoreText.textContent = "Score: " + score;
+    }
+</script>
