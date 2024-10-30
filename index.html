@@ -1,18 +1,29 @@
-<button id="1"> button 1 </button>
-<button id="2"> button 2 </button>
-<p id="message"> Hello! Please do as the computer tells you </p>
-<p id="score"></p>
-
-<script>
-    var button1 = document.getElementById("1");
-    button1.addEventListener("click",plusScore);
-
-    var score = 0
-    var scoreText = document.getElementById("score")
-    scoreText.textContent = "Score: " + score
-
-    function plusScore() {
-        score++;
-        scoreText.textContent = "Score: " + score;
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    .menu {
+        background-color: blue;
+        text-align: center;
+        a {
+            color: white;
+        }
     }
-</script>
+    .text {
+        width: 420px;
+    }
+  </style>
+</head>
+<body>
+    <main>
+      <div class="menu">
+        <h1> <a href="index.html">About</a> <a href="copycat.html">The program</a> <a href="">Contact</a> </h1>
+      </div>
+        <h2>Copycat</h2>
+        <div class="text">
+            <p>Copycat is a project created by Arvid for his final major programming project in the programming course.</p>
+        </div>
+    </main>
+</body>
+</html>
