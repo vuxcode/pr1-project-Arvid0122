@@ -1,0 +1,49 @@
+<p id="message"> Hello! Please do as the computer tells you. </p>
+<p id="computerSays"></p>
+<p id="score"></p>
+<script>
+    
+    window.addEventListener("keyup",whichKey)
+    function whichKey (event) {
+        keyPressed();
+        console.log(event.key);
+    }
+
+    var buttons = ["A","B"];
+
+    var score = 0
+    var scoreText = document.getElementById("score")
+    scoreText.textContent = "Score: " + score
+
+    var random = 0;
+    var correctButton = null;
+
+    function buttonSelect() {
+        random = Math.round(Math.random())
+        computerSays.textContent = "Press " + buttons[random];
+    }
+
+    function computerShow() {
+        buttonSelect();
+        correctButton = buttons[random];
+    }
+
+    function keyPressed(id) {
+            if(correctButton.toLowerCase() == event.key) {
+                plusScore();
+            }
+            reset();
+        }
+
+    function reset() {
+        correctButton = null;
+        computerShow();
+    }
+
+    function plusScore() {
+        score++;
+        scoreText.textContent = "Score: " + score;
+    }
+    
+    computerShow();
+</script>
