@@ -15,4 +15,8 @@
   - Spent a lot of time thinking about how i want the final version of the program to be like.
 
 - 2024-11-06 worked ca 5 hours in total.
-  - Solved issue with making the program detect which button is correct/incorrect and process them accordingly. 
+  - Solved issue with making the program detect which button is correct/incorrect and process them accordingly.
+
+- 2024-11-07 worked for ca 2 hours total.
+  - Cleaned up the code and removed previous unsuccesfull attempts at solving the issue with making the program detect which button has been clicked and process it accordingly.
+  - Started building another version of the program that uses keyboard events instead of clicking on buttons on the screen.
