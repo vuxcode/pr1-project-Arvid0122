@@ -1,5 +1,5 @@
-<button id="b1"> A </button>
-<button id="b2"> B </button>
+<button id="b1" onClick="buttonClicked(this.id)"> A </button>
+<button id="b2" onClick="buttonClicked(this.id)"> B </button>
 <p id="message"> Hello! Please do as the computer tells you. </p>
 <p id="computerSays"></p>
 <p id="score"></p>
@@ -9,26 +9,83 @@
     b1.style.display = "show";
 
     var buttons = [document.getElementById("b1"), document.getElementById("b2")];
-
-    function computerShow() {
-        var random = Math.round(Math.random())
-        computerSays.textContent = "Press " + buttons[random].textContent;
-        var correctButton = buttons[random];
-        correctButton.addEventListener("click",plusScore);
-    }
-    computerShow();
-    
-
     var score = 0
     var scoreText = document.getElementById("score")
     scoreText.textContent = "Score: " + score
+
+    var random = 0;
+    var correctButton = null;
+
+    function buttonSelect() {
+        random = Math.round(Math.random())
+        computerSays.textContent = "Press " + buttons[random].textContent;
+    }
+
+    function computerShow() {
+        buttonSelect();
+        correctButton = buttons[random];
+       // correctButton.addEventListener("click",plusScore);
+
+        //falseButton.addEventListener("click",reset)
+
+
+        //correctButton.addEventListener("click",reset);
+
+        //correctButton.addEventListener("click",computerShow);
+    }
+
+    function buttonClicked(id) {
+            console.log("ID = " + id);
+            if(id == correctButton.id) {
+                plusScore()
+            }
+            reset();
+        }
+
+    function reset() {
+        // for (var x =0;x < buttons.length;x++) {
+        //     buttons[x].removeEventListener("click",);
+        // }
+        correctButton = null;
+        computerShow();
+        //console.log("reset")
+    }
 
     function plusScore() {
         score++;
         scoreText.textContent = "Score: " + score;
     }
     
-    if (("click")) {
-        computerShow();
-    } 
+    computerShow();
+    // if (("click")) {
+    //     console.log("click");
+    // } 
+    // var buttons = [document.getElementById("b1"), document.getElementById("b2")];
+    // var random = Math.round(Math.random())
+    // var correctButton = buttons[random];
+
+    // function button () {
+    // var buttons = [document.getElementById("b1"), document.getElementById("b2")];
+    // var correctButton = buttons[random];
+    // }
+
+    // function computerShow() {
+    //     var random = Math.round(Math.random())
+    //     computerSays.textContent = "Press " + buttons[random].textContent;
+    //     correctButton;
+
+    // }
+
+    // function correctButtonClick() {
+    //     random;
+    //     correctButton;
+    //     correctButton.addEventListener("click",plusScore);
+    //     correctButton.addEventListener("click",computerShow);
+    //     correctButton.addEventListener("click", button);
+    //    // wrongButton.addEventListener("click",computerShow2);
+    // }
+    
+    // if (("click")) {
+    //     computerShow();
+    // } 
 </script>
