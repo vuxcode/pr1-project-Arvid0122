@@ -20,3 +20,9 @@
 - 2024-11-07 worked for ca 2 hours total.
   - Cleaned up the code and removed previous unsuccesfull attempts at solving the issue with making the program detect which button has been clicked and process it accordingly.
   - Started building another version of the program that uses keyboard events instead of clicking on buttons on the screen.
+
+- 2024-11-19 worked for ca 2 hours total.
+   - Added the entire alphabet as possible keys.
+   - Made sure that the probability of each key getting selected by the program is equal.
+   - Fixed issue when trying to press an uppercase letter where the program registers the "shift" or "caps lock" key as the wrong key and therefore displays a new key.
+   - Started incorporating a timer in the program that only shows the correct key for a short time.
