@@ -1,10 +1,30 @@
 <p id="message"> Hello! Please do as the computer tells you. </p>
 <p id="computerSays"></p>
 <p id="score"></p>
+<p id="counter">30</p>
 <script>
 
-    computerSays.style.display = "show";
-    
+    var countdown = document.getElementById("counter");
+    var indexCounter = 30;
+    var intervalCounter = setInterval(timerTotal, 1000);
+
+    function timerTotal() {
+        indexCounter--;
+        countdown.textContent = indexCounter;
+        if (indexCounter == 0) {
+            clearInterval(intervalCounter);
+        }
+    }
+
+    var timeoutGameOver = setTimeout(gameOver,30000)
+
+    function gameOver() {
+        if (countdown.textContent == 0) {
+            document.write("Game Over." + "<br>" + "Your score: " + score);
+        }
+    }
+
+
     window.addEventListener("keyup",whichKey)
     function whichKey (event) {
         keyPressed();
@@ -13,17 +33,23 @@
 
     var buttons = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
-    var score = 0
-    var scoreText = document.getElementById("score")
-    scoreText.textContent = "Score: " + score
+    var score = 0;
+    var scoreText = document.getElementById("score");
+    scoreText.textContent = "Score: " + score;
 
     var random = 0;
     var correctButton = null;
+    var timer;
+
+    function timerFunc() {
+        clearTimeout(timer);
+        timer = setTimeout(hide,2000);
+    }
 
     function buttonSelect() {
         random = Math.round(Math.random()*50)
         computerSays.textContent = "Press " + buttons[random];
-        setTimeout(hide,3000);
+        timerFunc();
     }
 
     function computerShow() {
@@ -42,6 +68,7 @@
 
     function reset() {
         show();
+        clearTimeout(timer);
         correctButton = null;
         computerShow();
     }
@@ -51,15 +78,14 @@
         scoreText.textContent = "Score: " + score;
     }
     
-    computerShow();
-
+    
     function hide() {
         computerSays.style.display = "none";
     }
-
+    
     function show() {
         computerSays.style.display = "block";
     }
-
-    //setTimeout(hide,3000);
+    
+    computerShow();
 </script>
