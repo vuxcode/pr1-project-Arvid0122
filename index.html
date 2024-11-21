@@ -3,27 +3,72 @@
 <head>
   <title></title>
   <style>
+    * {
+      margin:0px;
+      padding:0px;
+      box-sizing: border-box;
+    }
+
+    body {
+      text-align: center;
+    }
+
     .menu {
-        background-color: blue;
-        text-align: center;
+        background-color: rgb(69, 88, 212);        
         a {
-            color: white;
+          text-decoration: none;
+          color: white;
+          margin:0px 110px 0px 110px;
         }
+        padding: 20px;
+      a:hover {
+        color:rgb(15, 38, 65);
+      }
     }
+
     .text {
-        width: 420px;
+        width: 500;
+        margin: 20px;
     }
+
+    .title {
+      margin:10px;
+    }
+    
   </style>
 </head>
+
 <body>
     <main>
       <div class="menu">
-        <h1> <a href="index.html">About</a> <a href="copycat.html">The program</a> <a href="">Contact</a> </h1>
+        <h1>
+          <a href="index.html">
+            About
+          </a>
+          <a href="copycat-keyboard-event.html">
+            The program
+          </a>
+          <a href="">
+            Contact
+          </a>
+        </h1>
       </div>
-        <h2>Copycat</h2>
+
+        <h1 class="title">
+          Copycat
+        </h1>
         <div class="text">
-            <p>Copycat is a project created by Arvid for his final major programming project in the programming course.</p>
+            <p>
+              Copycat is a project created by Arvid for his final major programming project in the programming course.
+            </p>
         </div>
+        <h2 class="title">
+          The process
+        </h2>
+        <p>
+          The project started with an idea of making a "copycat" game where the user mimics the computer. 
+        </p>
+        
     </main>
 </body>
 </html>
