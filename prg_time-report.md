@@ -26,3 +26,8 @@
    - Made sure that the probability of each key getting selected by the program is equal.
    - Fixed issue when trying to press an uppercase letter where the program registers the "shift" or "caps lock" key as the wrong key and therefore displays a new key.
    - Started incorporating a timer in the program that only shows the correct key for a short time.
+     
+- 2024-11-20 worked for ca 2,5 hours total.
+  - Finished making the timer that shows the correct button for a short period of time.
+  - Added another timer that starts counting down from 30 when you start the program.
+  - Added a game over screen that displays the score when the counter reaches 0.
