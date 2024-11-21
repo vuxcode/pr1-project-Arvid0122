@@ -31,3 +31,6 @@
   - Finished making the timer that shows the correct button for a short period of time.
   - Added another timer that starts counting down from 30 when you start the program.
   - Added a game over screen that displays the score when the counter reaches 0.
+
+- 2024-11-21 worked for ca 0,5 hours.
+  - Changed the font so that the characters "L" and "I" in both uppercase and lowercase are distinguishable from each other.
