@@ -11,3 +11,9 @@
   - Changed the colors of the website
   - Changed the structure of the site
   - Made some changes to the menu at the top of the site
+    
+- 2024-11-22 worked for ca 2,5 hours.
+  - Updated the code so it has more semantic elements
+  - Added some more text paragraphs
+  - Updated the structure of the page so the text paragraphs are contained in a certain area
+  - Started planning where to place images on the site
