@@ -13,62 +13,84 @@
       text-align: center;
     }
 
-    .menu {
-        background-color: rgb(69, 88, 212);        
-        a {
-          text-decoration: none;
-          color: white;
-          margin:0px 110px 0px 110px;
-        }
-        padding: 20px;
-      a:hover {
-        color:rgb(15, 38, 65);
-      }
+    header {
+      font-size: 30px;
+      background-color: rgb(69, 88, 212);        
+      padding: 20px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: white;
+      margin:5px 100px 5px 100px;
+      display: inline-block;
+    }  
+    
+    a:hover {
+      color:rgb(15, 38, 65);
+    }
+    
+    nav {
+      margin: auto;
     }
 
     .text {
-        width: 500;
-        margin: 20px;
+      width: 500;
+      margin: 20px;
     }
 
     .title {
       margin:10px;
+      font-size: 30px;
+    }
+
+    section {
+      text-align: center;
+      width:500px;
+      margin:auto;
     }
     
   </style>
 </head>
 
 <body>
-    <main>
-      <div class="menu">
-        <h1>
-          <a href="index.html">
-            About
-          </a>
-          <a href="copycat-keyboard-event.html">
-            The program
-          </a>
-          <a href="">
-            Contact
-          </a>
-        </h1>
-      </div>
+  <main>
+    <header>
+      <nav>
+        <a href="index.html">About</a>
+        <a href="copycat-keyboard-event.html">The Program</a>
+        <a href="">Contact</a>
+      </nav>
+    </header>
 
-        <h1 class="title">
-          Copycat
-        </h1>
-        <div class="text">
-            <p>
-              Copycat is a project created by Arvid for his final major programming project in the programming course.
-            </p>
-        </div>
-        <h2 class="title">
-          The process
-        </h2>
-        <p>
-          The project started with an idea of making a "copycat" game where the user mimics the computer. 
-        </p>
-        
-    </main>
+    <section>
+      <h1 class="title">Copycat</h1>
+      <p>
+        Copycat is a project created by Arvid for his final major programming project in the programming course. 
+        On this page you can learn more about how the program was built and follow the process.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="title">The process</h2>
+      <p>The project started with an idea of making a "copycat" game where the user mimics the computer.</p>
+      <br>
+      <p>
+        At first the program was built using only buttons on the screen that you would click on.
+        This was later expanded on when I used the same concept but replaced the buttons on the screen with keys on the keyboard.
+      </p>
+      <br>
+      <p>
+        for further understanding, i have included some pictures of my time report on the project, showcasing when i have worked on the
+        program and what i have done.
+      </p>
+      <br>
+      <p>
+        I have also included some images of my bug list where i have documented all major problems i have faced and how i have solved them.
+      </p>
+      <img src="">
+    </section>
+
+  </main>
 </body>
 </html>
