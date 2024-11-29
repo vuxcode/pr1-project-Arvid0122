@@ -4,11 +4,24 @@
   <link href="style.css" rel="stylesheet">
   <style>
     fieldset {
-      
-      width: 200px;
+      width: 500px;
+      height: 300px;
+      display: inline-block;
+      background-color: lightblue;
+    }
+    textarea {
+      width: 400px;
       height: 200px;
+      margin: 20px;
     }
 
+    p {
+      margin:10px;
+    }
+
+    .input1 {
+      margin:10px 90px 0px 0px;
+    }
   </style>
 </head>
 
@@ -23,20 +36,24 @@
     </header>
 
     <section>
-      <p>If you would like to contact the creator you can do it here</p>
+      <p>
+        This project/website was created with the purpose of showcasing the creators programming capabilities for their course in
+        webdevelopment and programming.
+      </p>
+      <p>If you would like to contact the creator and give feedback you can do it here.</p>
     </section>
     <form action="" method="POST"></form>
-      <fieldset>
-        <legend>Contact Me</legend>
-        
-        <label for="email">Your email</label>
-        <input id="email" type="email">
-        
-        <input type="submit">
-        
-        <label for="message">Enter your message here</label>
+      <fieldset>        
+
+        <label for="email">Your email:</label>
+        <input id="email" class="input1"type="email">
+        <!-- <input type="submit"> -->
+        <br>
+        <label for="message">Enter your message here:</label>
         <textarea id="message" name="message" rows="5"></textarea>
+
       </fieldset>
+      <br>
       <input type="submit" value="Send">
     </form>
   </main>
