@@ -68,6 +68,10 @@
             if(correctButton == event.key) {
                 plusScore();
             }
+            else {
+                score--
+                scoreText.textContent = "Score: " + score;
+            }
             reset();
         }
     }
