@@ -17,3 +17,8 @@
   - Added some more text paragraphs
   - Updated the structure of the page so the text paragraphs are contained in a certain area
   - Started planning where to place images on the site
+
+- 2024-11-29 worked for ca 2,5 hour total
+  - Added contact page
+  - Added links between the all the pages, meaning you can go from one of the pages to any of the other ones using the menu at the top
+  - Made a "start" site for the program that explains how to use it
