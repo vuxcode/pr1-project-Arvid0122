@@ -22,3 +22,4 @@
   - Added contact page
   - Added links between the all the pages, meaning you can go from one of the pages to any of the other ones using the menu at the top
   - Made a "start" site for the program that explains how to use it
+  - Removed everything in the style element and put it into a separate css file
