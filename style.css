@@ -1,0 +1,47 @@
+  * {
+      margin:0px;
+      padding:0px;
+      box-sizing: border-box;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    header {
+      font-size: 30px;
+      background-color: rgb(69, 88, 212);        
+      padding: 20px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: white;
+      margin:5px 100px 5px 100px;
+      display: inline-block;
+    }  
+    
+    a:hover {
+      color:rgb(15, 38, 65);
+    }
+    
+    nav {
+      margin: auto;
+    }
+
+    .text {
+      width: 500;
+      margin: 20px;
+    }
+
+    .title {
+      margin:10px;
+      font-size: 30px;
+    }
+
+    section {
+      text-align: center;
+      width:500px;
+      margin:auto;
+    }
+    
