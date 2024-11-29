@@ -4,11 +4,18 @@
         font-family: 'Lora', serif;
     }
 </style>
+<button id="back" onclick="backFunc()">Back</button>
 <p id="message"> Hello! Please do as the computer tells you. </p>
-<p id="computerSays"></p>
 <p id="score"></p>
 <p id="counter">30</p>
+<p id="computerSays"></p>
 <script>
+    var back = document.getElementById("back")
+    back.style.display = "block";
+
+    function backFunc() {
+        window.location.href = "start.html";
+    }
 
     var countdown = document.getElementById("counter");
     var indexCounter = 30;
@@ -29,7 +36,6 @@
             document.write("Game Over." + "<br>" + "Your score: " + score);
         }
     }
-
 
     window.addEventListener("keyup",whichKey)
     function whichKey (event) {
@@ -87,7 +93,6 @@
         score++;
         scoreText.textContent = "Score: " + score;
     }
-    
     
     function hide() {
         computerSays.style.display = "none";
