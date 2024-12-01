@@ -1,21 +1,30 @@
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-    body {
-        font-family: 'Lora', serif;
-    }
-</style>
-<button id="back" onclick="backFunc()">Back</button>
-<p id="message"> Hello! Please do as the computer tells you. </p>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+            body {
+                font-family: 'Lora', serif;
+            }
+        </style>
+    </head>
+<body>
+    <header>
+        <nav>
+          <a href="index.html">About</a>
+          <a href="start.html">The Program</a>
+          <a href="contact-page.html">Contact</a>
+        </nav>
+    </header>
+<p id="message"> Computer says:</p>
+<p id="computerSays"></p>
 <p id="score"></p>
 <p id="counter">30</p>
-<p id="computerSays"></p>
+<p id="gameOverText"></p>
 <script>
-    var back = document.getElementById("back")
-    back.style.display = "block";
 
-    function backFunc() {
-        window.location.href = "start.html";
-    }
+    var gameOverText = document.getElementById("gameOverText");
+    gameOverText.style.display = "block";
 
     var countdown = document.getElementById("counter");
     var indexCounter = 30;
@@ -29,15 +38,18 @@
         }
     }
 
-    var timeoutGameOver = setTimeout(gameOver,30000)
+    var timeoutGameOver = setTimeout(gameOver,30000);
 
     function gameOver() {
-        if (countdown.textContent == 0) {
-            document.write("Game Over." + "<br>" + "Your score: " + score);
+            gameOverText.innerHTML = "Game over.<br>Your score: " + score;
+            message.textContent = "";
+            scoreText.textContent = "";
+            countdown.textContent = "";
+            window.removeEventListener("keyup", whichKey);
         }
-    }
 
     window.addEventListener("keyup",whichKey)
+    
     function whichKey (event) {
         keyPressed();
         console.log(event.key);
@@ -104,3 +116,5 @@
     
     computerShow();
 </script>
+</body>
+</html>
