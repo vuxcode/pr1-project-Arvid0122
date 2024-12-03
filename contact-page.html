@@ -4,34 +4,43 @@
   <link href="style.css" rel="stylesheet">
   <style>
     fieldset {
-      width: 500px;
-      height: 310px;
+      width: 380px;
+      height: 250px;
       display: inline-block;
       background-color: lightblue;
       margin: 10px 0px;
-      border-radius: 5%;
+      border-radius: 1%;
       border-style: none;
     }
     textarea {
-      width: 400px;
-      height: 200px;
+      width: 310px;
+      height: 150px;
       margin: 20px 0px 10px 0px;
     }
 
     p {
-      margin: 10px;
-      font-size: 20px;
+      margin: 5px 0px 5px 0px;
       list-style: none;
     }
 
     .input1 {
-      margin: 10px 90px 0px 0px;
+      margin: 0px 90px 0px 80px;
+      width: 200px;
+      /* height: 10px; */
     }
 
     .input2 {
       margin: 20px 0px 0px 0px;
       width: 100px;
       height: 50px;
+    }
+
+    label {
+      margin: 0px 0px 0px -10px;
+    }
+
+    h1 {
+      margin: 10px 0px 5px 0px;
     }
   </style>
 </head>
@@ -47,7 +56,7 @@
     </header>
 
     <section>
-      <h1>Contact the creator</h1>
+      <h1 class="title">Contact the creator</h1>
       <p>
         This project/website was created with the purpose of showcasing the creators programming capabilities for their course in
         webdevelopment and programming.
@@ -58,7 +67,7 @@
       <fieldset>        
 
         <label for="email">Your email:</label>
-        <input id="email" class="input1"type="email">
+        <input id="email" class="input1" type="email">
         <!-- <input type="submit"> -->
         <br>
         <label for="message">Enter your message here:</label>
