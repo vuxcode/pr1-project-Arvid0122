@@ -28,9 +28,15 @@
   - Added a "back" button to the program.
   - Updated the "start" page.
   - Updated the program so the locations of different things such as certain texts and buttons appear in a more convenient way allowing a smoother experience.
-
--2024-12-02 worked for ca 3,5 hours total
- - Changed the font for the website
- - Added a subtle gradient to the top menu
- - Started adding image
- - Experimented with css to see what style i want for the site
+    
+- 2024-12-02 worked for ca 3,5 hours total
+  - Changed the font for the website
+  - Added a subtle gradient to the top menu
+  - Started adding image
+  - Experimented with css to see what style i want for the site
+   
+- 2024-12-03 worked for ca 6,5 hours total
+  - Experimented more with css
+  - Changed the styling of the copycat program so it looks more proper
+  - Updated all pages so they are now more cohesive together
+  - Updated all pages individually, small general improvements
