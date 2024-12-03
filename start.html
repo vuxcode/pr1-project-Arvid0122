@@ -6,12 +6,9 @@
         p {
             margin:10px;
         }
-        h1 {
-            margin: 0px 0px 10px 0px;
-            padding: 10px 0px 10px 0px;
-            background-color: rgb(94, 170, 237);
-            /* width: 100px;
-            height: 100px; */
+
+        main {
+            margin: 0px;
         }
     </style>
 </head>
@@ -26,8 +23,8 @@
                 </nav>
             </header>
         
-            <h1>Try the program</h1>
-            <p style="font-size: 30px;">Instructions:</p>
+            <h1 class="title">Try the program</h1>
+            <p style="font-size: 25px;">Instructions:</p>
             <p>The computer will show a letter on the screen for half a second.</p>
             <p>The goal is to press the same letter, resulting in you getting a score.</p>
             <p>If you do not press the same key you will instead lose a point.</p>
@@ -35,7 +32,7 @@
             <p>Once you click the start button below the program will immediately start.</p>
             <p>Good luck!</p>
             </p>
-        <button onClick="start()">start</button>
+        <button class="input2" onClick="start()">START</button>
         <script>
             function start() {
                 window.location.href = "copycat-keyboard-event.html";
