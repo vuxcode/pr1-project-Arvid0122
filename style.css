@@ -4,14 +4,23 @@
       box-sizing: border-box;
     }
 
+    /* @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap'); */
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
     body {
+      /* font-family: 'Lora', serif; */
+      font-family: 'Rubik', sans-serif;
       text-align: center;
+      background-color: aliceblue;
     }
 
     header {
       font-size: 30px;
       background-color: rgb(69, 88, 212);        
       padding: 20px;
+      background: radial-gradient(circle, rgb(69, 88, 212) 60%, rgb(202, 208, 212) 190%);
+      /* border-style: solid;
+      border-width: 5px;
+      border-color: rgb(54, 121, 180); */
     }
     
     a {
@@ -29,9 +38,8 @@
       margin: auto;
     }
 
-    .text {
-      width: 500;
-      margin: 20px;
+    p {
+      font-size: 20px;
     }
 
     .title {
@@ -44,4 +52,3 @@
       width:500px;
       margin:auto;
     }
-    
