@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
     <head>
         <link href="style.css" rel="stylesheet">
         <style>
@@ -6,6 +6,15 @@
             p {
               font-family: 'Lora', serif;
               text-align: center;
+            }
+            header {
+                margin: 0px 0px 30px 0px;
+            }
+            div {
+                width: 80px;
+                height: 80px;
+                margin: 20px 0px 20px 0px;
+                display: inline-block;
             }
         </style>
     </head>
@@ -17,15 +26,18 @@
           <a href="contact-page.html">Contact</a>
         </nav>
     </header>
-<p id="message"> Computer says:</p>
-<p id="computerSays"></p>
+<p id="message" style="font-size: 50px;"> Computer says:</p>
+<div>
+<p id="computerSays" style="font-size: 30px"></p>
+</div>
 <p id="score"></p>
-<p id="counter">30</p>
-<p id="gameOverText"></p>
+<p id="counter">Time left: 30</p>
+<p id="gameOverText" style="font-size: 50px;"></p>
+<p id="finalScore" style="margin:5px;"></p>
 <script>
 
     var gameOverText = document.getElementById("gameOverText");
-    gameOverText.style.display = "block";
+    var finalScore = document.getElementById("finalScore");
 
     var countdown = document.getElementById("counter");
     var indexCounter = 30;
@@ -33,7 +45,7 @@
 
     function timerTotal() {
         indexCounter--;
-        countdown.textContent = indexCounter;
+        countdown.textContent = "Time left: " + indexCounter;
         if (indexCounter == 0) {
             clearInterval(intervalCounter);
         }
@@ -42,7 +54,8 @@
     var timeoutGameOver = setTimeout(gameOver,30000);
 
     function gameOver() {
-            gameOverText.innerHTML = "Game over.<br>Your score: " + score;
+            gameOverText.innerHTML = "Game over";
+            finalScore.innerHTML = "Your score: " + score;
             message.textContent = "";
             scoreText.textContent = "";
             countdown.textContent = "";
@@ -56,8 +69,8 @@
         console.log(event.key);
     }
 
-    //var buttons = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-    var buttons = ["L","l","I","i"]
+    var buttons = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    //var buttons = ["L","l","I","i"]
     var score = 0;
     var scoreText = document.getElementById("score");
     scoreText.textContent = "Score: " + score;
@@ -72,7 +85,153 @@
     }
 
     function buttonSelect() {
-        random = Math.round(Math.random()*3)
+        random = Math.round(Math.random()*50)
+        computerSays.textContent = "Press " + buttons[random];
+        timerFunc();
+    }
+
+    function computerShow() {
+        buttonSelect();
+        correctButton = buttons[random];
+    }
+
+    function keyPressed(id) {
+        if (buttons.includes(event.key)) {
+            if(correctButton == event.key) {
+                plusScore();
+            }
+            else {
+                score--
+                scoreText.textContent = "Score: " + score;
+            }
+            reset();
+        }
+    }
+
+    function reset() {
+        show();
+        clearTimeout(timer);
+        correctButton = null;
+        computerShow();
+    }
+
+    function plusScore() {
+        score++;
+        scoreText.textContent = "Score: " + score;
+    }
+    
+    function hide() {
+        computerSays.style.display = "none";
+    }
+    
+    function show() {
+        computerSays.style.display = "block";
+    }
+    
+    computerShow();
+</script>
+</body>
+</html> -->
+
+
+
+
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+            p {
+              font-family: 'Lora', serif;
+              text-align: center;
+            }
+            header {
+                margin: 0px 0px 30px 0px;
+            }
+            .compSays {
+                height: 30px;
+                margin: 40px 0px 20px 0px;
+                display: inline-block;
+            }
+            .timeScore {
+              display: flex;
+              justify-content: center;
+              gap: 60px;
+              margin-top: 40px;
+            }
+
+        </style>
+    </head>
+<body>
+    <header>
+        <nav>
+          <a href="index.html">About</a>
+          <a href="start.html">The Program</a>
+          <a href="contact-page.html">Contact</a>
+        </nav>
+    </header>
+<p id="message" style="font-size: 50px;"> Computer says:</p>
+<div class="compSays">
+<p id="computerSays" style="font-size: 30px"></p>
+</div>
+<div class="timeScore">
+    <p id="counter">Time left: 30</p>
+    <p id="score">Score: 0</p>
+</div>
+<p id="gameOverText" style="font-size: 50px; margin: -40px 0px;"></p>
+<p id="finalScore" style="margin:80px;"></p>
+<script>
+
+    var gameOverText = document.getElementById("gameOverText");
+    var finalScore = document.getElementById("finalScore");
+
+    var countdown = document.getElementById("counter");
+    var indexCounter = 30;
+    var intervalCounter = setInterval(timerTotal, 1000);
+
+    function timerTotal() {
+        indexCounter--;
+        countdown.textContent = "Time left: " + indexCounter;
+        if (indexCounter == 0) {
+            clearInterval(intervalCounter);
+        }
+    }
+
+    var timeoutGameOver = setTimeout(gameOver,30000);
+
+    function gameOver() {
+            gameOverText.innerHTML = "Game over";
+            finalScore.innerHTML = "Your score: " + score;
+            message.textContent = "";
+            scoreText.textContent = "";
+            countdown.textContent = "";
+            window.removeEventListener("keyup", whichKey);
+        }
+
+    window.addEventListener("keyup",whichKey)
+    
+    function whichKey (event) {
+        keyPressed();
+        console.log(event.key);
+    }
+
+    var buttons = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    //var buttons = ["L","l","I","i"]
+    var score = 0;
+    var scoreText = document.getElementById("score");
+    scoreText.textContent = "Score: " + score;
+
+    var random = 0;
+    var correctButton = null;
+    var timer;
+
+    function timerFunc() {
+        clearTimeout(timer);
+        timer = setTimeout(hide,500);
+    }
+
+    function buttonSelect() {
+        random = Math.round(Math.random()*50)
         computerSays.textContent = "Press " + buttons[random];
         timerFunc();
     }
