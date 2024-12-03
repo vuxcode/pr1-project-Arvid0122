@@ -10,6 +10,7 @@
     font-family: 'Rubik', sans-serif;
     text-align: center;
     background-color: aliceblue;
+    /* background: linear-gradient(to bottom, rgb(69, 88, 212) 60%, rgb(202, 208, 212) 190%); */
   }
   header {
     font-size: 30px;
