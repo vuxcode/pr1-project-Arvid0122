@@ -3,8 +3,9 @@
         <link href="style.css" rel="stylesheet">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-            body {
-                font-family: 'Lora', serif;
+            p {
+              font-family: 'Lora', serif;
+              text-align: center;
             }
         </style>
     </head>
@@ -55,8 +56,8 @@
         console.log(event.key);
     }
 
-    var buttons = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-    //var buttons = ["L","l","I","i"]
+    //var buttons = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    var buttons = ["L","l","I","i"]
     var score = 0;
     var scoreText = document.getElementById("score");
     scoreText.textContent = "Score: " + score;
@@ -71,7 +72,7 @@
     }
 
     function buttonSelect() {
-        random = Math.round(Math.random()*50)
+        random = Math.round(Math.random()*3)
         computerSays.textContent = "Press " + buttons[random];
         timerFunc();
     }
