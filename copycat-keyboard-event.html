@@ -159,6 +159,9 @@
               gap: 60px;
               margin-top: 40px;
             }
+            body {
+                text-align: center;
+            }
 
         </style>
     </head>
@@ -170,6 +173,7 @@
           <a href="contact-page.html">Contact</a>
         </nav>
     </header>
+<section>
 <p id="message" style="font-size: 50px;"> Computer says:</p>
 <div class="compSays">
 <p id="computerSays" style="font-size: 30px"></p>
@@ -178,9 +182,16 @@
     <p id="counter">Time left: 30</p>
     <p id="score">Score: 0</p>
 </div>
-<p id="gameOverText" style="font-size: 50px; margin: -40px 0px;"></p>
-<p id="finalScore" style="margin:80px;"></p>
+<p id="gameOverText" style="font-size: 60px; margin: -40px 0px;"></p>
+<p id="finalScore" style="margin:90px 0px 70px 0px;"></p>
+<button id="playAgain" class="input2" onclick="start()">RESET</button>
+</section>
 <script>
+    var playAgain = document.getElementById("playAgain");
+
+    function start() {
+        window.location.href = "copycat-keyboard-event.html";
+    }
 
     var gameOverText = document.getElementById("gameOverText");
     var finalScore = document.getElementById("finalScore");
@@ -206,6 +217,7 @@
             scoreText.textContent = "";
             countdown.textContent = "";
             window.removeEventListener("keyup", whichKey);
+            playAgain.textContent = "PLAY AGAIN"
         }
 
     window.addEventListener("keyup",whichKey)
