@@ -40,3 +40,9 @@
   - Changed the styling of the copycat program so it looks more proper
   - Updated all pages so they are now more cohesive together
   - Updated all pages individually, small general improvements
+    
+- 2024-12-04 worked for ca 7,5 hours total
+  - Experimented more with css
+  - Added a background for each section on the site
+  - Worked on making the site user-friendly multiple devices
+  - Updated the css file making all the pages use the same styling
