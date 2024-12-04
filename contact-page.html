@@ -4,44 +4,57 @@
   <link href="style.css" rel="stylesheet">
   <style>
     fieldset {
-      width: 380px;
+      width: 100%;
+      max-width: 300px;
       height: 250px;
-      display: inline-block;
-      background-color: lightblue;
-      margin: 10px 0px;
-      border-radius: 1%;
+      display: block;
+      margin: 20px auto -10px;
       border-style: none;
+      text-align: center;
+      
     }
+
     textarea {
-      width: 310px;
+      width: 100%;
+      max-width: 300px;
       height: 150px;
-      margin: 20px 0px 10px 0px;
+      border-radius: 10px;
+      border-style: none;
+      padding: 7px;
     }
 
     p {
       margin: 5px 0px 5px 0px;
-      list-style: none;
     }
 
-    .input1 {
-      margin: 0px 90px 0px 80px;
-      width: 200px;
-      /* height: 10px; */
+    .inputEmail {
+      width: 80%;
+      height: 20px;
+      max-width: 205px;
+      display: block;
+      margin: 10px auto;
+      padding: 15px;
+      border-style: none;
+      border-radius: 10px;
     }
-
-    .input2 {
-      margin: 20px 0px 0px 0px;
-      width: 100px;
-      height: 50px;
-    }
-
+   
     label {
-      margin: 0px 0px 0px -10px;
+      display: block;
+    }
+
+    .labelEmail {
+      margin: 10px auto;
+    }
+
+    .labelMessage {
+      margin: 10px auto;
     }
 
     h1 {
       margin: 10px 0px 5px 0px;
+      display: block;
     }
+    
   </style>
 </head>
 
@@ -59,24 +72,22 @@
       <h1 class="title">Contact the creator</h1>
       <p>
         This project/website was created with the purpose of showcasing the creators programming capabilities for their course in
-        webdevelopment and programming.
+        webdevelopment and programming. If you would like to contact the creator and give feedback you can do it here.
       </p>
-      <p>If you would like to contact the creator and give feedback you can do it here.</p>
-    </section>
     <form action="" method="POST"></form>
       <fieldset>        
 
-        <label for="email">Your email:</label>
-        <input id="email" class="input1" type="email">
-        <!-- <input type="submit"> -->
+        <label for="email" class="labelEmail">Your email:</label>
+        <input id="email" class="inputEmail" type="email">
         <br>
-        <label for="message">Enter your message here:</label>
-        <textarea id="message" name="message" rows="5"></textarea>
+        <label for="message" class="labelMessage">Enter your message here:</label>
+        <textarea name="message" rows="5"></textarea>
 
       </fieldset>
       <br>
       <input class="input2" type="submit" value="Send">
     </form>
+  </section>
   </main>
 </body>
 </html>
