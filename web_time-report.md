@@ -44,5 +44,10 @@
 - 2024-12-04 worked for ca 7,5 hours total
   - Experimented more with css
   - Added a background for each section on the site
-  - Worked on making the site user-friendly multiple devices
+  - Worked on making the site user-friendly on multiple devices
   - Updated the css file making all the pages use the same styling
+
+- 2024-12-05 worked for ca 6 hours total.
+  - Continued working on making the site user-friendly on multiple devices
+  - Tidied up some code
+  - Tidied up the copycat program making look nicer
