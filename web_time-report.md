@@ -51,3 +51,8 @@
   - Continued working on making the site user-friendly on multiple devices
   - Tidied up some code
   - Tidied up the copycat program making look nicer
+
+- 2024-12-06 worked for ca 4 hours total
+  - Started working on making everything accesible
+  - Started adding comments to each file
+  - Signed up for formspree making the contact page work as intended
