@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- link to the style.css file controlling the general design-->
     <link href="style.css" rel="stylesheet">
     <style>
     </style>
@@ -28,9 +29,12 @@
                 Once you click the start button below the program will immediately start.
                 Good luck!
             </p>
+        <!-- Add button that start the program when clicked -->
         <button class="input2" onClick="start()">START</button>
+        <!-- For the button to work we need to create a function in javascript -->
         <script>
             function start() {
+                // Using window.location.href we can access a different file
                 window.location.href = "copycat-keyboard-event.html";
             }
         </script>
