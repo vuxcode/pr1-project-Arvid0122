@@ -1,4 +1,7 @@
+/* Import font from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Reset the margin and padding and set border-box on all elements*/
 * {
   margin: 0px;
   padding: 0px;
@@ -6,6 +9,7 @@
 }
 /* @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap'); */
 
+/* Change the font for everything in the body and change the background color */
 body {
   /* font-family: 'Lora', serif; */
   font-family: 'Rubik', sans-serif;
@@ -33,7 +37,6 @@ a {
 a:hover {
   color:rgb(27, 255, 137);
 }
-
 
 nav {
   text-align: center;
@@ -91,4 +94,5 @@ img {
   height: auto;
   margin: 20px auto;
   border-radius: 8px;
+  display: block;
 }
