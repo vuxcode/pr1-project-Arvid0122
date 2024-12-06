@@ -1,27 +1,38 @@
 <html>
     <head>
+        <!-- link to the style.css file controlling the general design-->
         <link href="style.css" rel="stylesheet">
         <style>
+            /* Import font from google fonts */
             @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+            /* Set the css style */
             p {
               font-family: 'Lora', serif;
               text-align: center;
               margin: 0px auto;
             }
            
+            /* Set the css style */
             .compSays {
                 height: 30px;
                 margin: 50px 0px 20px 0px;
                 display: block;
             }
+
+            /* Set the css style */
             .timeScore {
               display: flex;
               gap: 28px;
               margin: 30px auto;
             }
+
+            /* Set the css style */
             body {
                 text-align: center;
             }
+
+            /* Set the css style */
             .computerSays {
                 width: 100%;
                 max-width: 120px;
@@ -29,51 +40,91 @@
                 display: block;
                 font-size: 25px;
             }
+
+            /* Set the css style */
             .finalScore {
-                margin: 160px 0px 125px 0px;
+                margin: 160px 0px 75px 0px;
             }
+
+            /* Set the css style */
             .gameOverText {
                 font-size: 45px;
                 margin: -100px 0px;
             }
-
         </style>
     </head>
 <body>
+    <!-- Make a menu at the top of the page using header -->
     <header>
+        <!-- Add navigation links to the menu -->
         <nav>
+          <!-- Insert the links to all the pages -->
           <a href="index.html">About</a>
           <a href="start.html">The Program</a>
           <a href="contact-page.html">Contact</a>
         </nav>
-    </header>
+      </header>
+
+<!-- Make a section to create the "play area" -->
 <section>
+<!-- Create text paragraph with id and class -->
 <p id="message" class="computerSays"> Computer says:</p>
+
+<!-- Create a div to change the css of this paragraph specifically -->
 <div class="compSays">
-<p id="press" style="font-size: 25px"></p>
+    <p id="press" style="font-size: 25px"></p>
 </div>
+
+<!-- Create a div to contain the score and timer -->
 <div class="timeScore">
     <p id="counter">Time left: 30</p>
     <p id="score">Score: 0</p>
 </div>
+
+<!-- Paragraph for the game over text -->
 <p id="gameOverText" class="gameOverText"></p>
+
+<!-- Paragraph for the final score text -->
 <p id="finalScore" class="finalScore"></p>
+
+<!-- Add button to reset/play again -->
 <button id="playAgain" class="input2" onclick="start()">RESET</button>
 </section>
-<script>
-    var playAgain = document.getElementById("playAgain");
 
+<script>
+    // Store the text paragraphs from above in variables
+    var playAgain = document.getElementById("playAgain");
+    var countdown = document.getElementById("counter");
+    var gameOverText = document.getElementById("gameOverText");
+    var finalScore = document.getElementById("finalScore");
+
+    // Create variables to store the score
+    var score = 0;
+    var scoreText = document.getElementById("score");
+    scoreText.textContent = "Score: " + score;
+
+    // Create variables for the countdown
+    var intervalCounter = setInterval(timerTotal, 1000);
+    var indexCounter = 30;
+    
+    // Create a timer for the "game over" screen
+    var timeoutGameOver = setTimeout(gameOver,30000);
+
+    // Create an array with all possible keys
+    var buttons = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    //var buttons = ["L","l","I","i"]
+
+    // Create variables to be used when generating the "correct key"
+    var random = 0;
+    var correctButton = null;
+    var timer;
+
+    // Function that starts the program
     function start() {
         window.location.href = "copycat-keyboard-event.html";
     }
 
-    var gameOverText = document.getElementById("gameOverText");
-    var finalScore = document.getElementById("finalScore");
-
-    var countdown = document.getElementById("counter");
-    var indexCounter = 30;
-    var intervalCounter = setInterval(timerTotal, 1000);
-
+    // Function for the countdown displaying how much time is left
     function timerTotal() {
         indexCounter--;
         countdown.textContent = "Time left: " + indexCounter;
@@ -82,8 +133,7 @@
         }
     }
 
-    var timeoutGameOver = setTimeout(gameOver,30000);
-
+    // Function for the "game over" screen
     function gameOver() {
             gameOverText.innerHTML = "Game over";
             finalScore.innerHTML = "Your score: " + score;
@@ -93,23 +143,24 @@
             window.removeEventListener("keyup", whichKey);
             playAgain.textContent = "PLAY AGAIN"
         }
-
+        
+    // Event listener that registers what key is released and runs the whichKey function
     window.addEventListener("keyup",whichKey)
     
-    function whichKey (event) {
-        keyPressed();
-        console.log(event.key);
+    // The function that runs when a key is released
+    function whichKey (event,id) {
+        if (buttons.includes(event.key)) {
+            if(correctButton == event.key) {
+                plusScore();
+            }
+            else {
+                score--
+                scoreText.textContent = "Score: " + score;
+            }
+            reset();
+        }
+        // console.log(event.key);
     }
-
-    var buttons = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-    //var buttons = ["L","l","I","i"]
-    var score = 0;
-    var scoreText = document.getElementById("score");
-    scoreText.textContent = "Score: " + score;
-
-    var random = 0;
-    var correctButton = null;
-    var timer;
 
     function timerFunc() {
         clearTimeout(timer);
@@ -127,18 +178,6 @@
         correctButton = buttons[random];
     }
 
-    function keyPressed(id) {
-        if (buttons.includes(event.key)) {
-            if(correctButton == event.key) {
-                plusScore();
-            }
-            else {
-                score--
-                scoreText.textContent = "Score: " + score;
-            }
-            reset();
-        }
-    }
 
     function reset() {
         show();
