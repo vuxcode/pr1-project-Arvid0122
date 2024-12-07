@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <title>Contact</title>
+  <meta charset="UTF-8">
   <link href="style.css" rel="stylesheet">
   <style>
     fieldset {
@@ -20,7 +22,7 @@
       border-radius: 10px;
       border-style: none;
       padding: 7px;
-      margin: 22px auto;
+      margin: 10px auto;
       display: block;
     }
 
@@ -29,7 +31,7 @@
       height: 20px;
       max-width: 205px;
       display: block;
-      margin: 10px auto;
+      margin: 7px auto;
       padding: 15px;
       border-style: none;
       border-radius: 10px;
@@ -40,11 +42,11 @@
     }
 
     .labelEmail {
-      margin: 10px auto;
+      margin: auto;
     }
 
     .labelMessage {
-      margin: -10px auto;
+      margin: -7px auto 10px;
     }
 
     h1 {
@@ -60,27 +62,30 @@
 </head>
 
 <body>
+  <header>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="start.html" aria-current="page">The Program</a>
+      <a href="contact-page.html">Contact</a>
+    </nav>
+  </header>
   <main>
-    <header>
-      <nav>
-        <a href="index.html">About</a>
-        <a href="start.html">The Program</a>
-        <a href="contact-page.html">Contact</a>
-      </nav>
-    </header>
 
     <section>
       <h1 class="title">Contact the creator</h1>
       <p>
-        This project/website was created with the purpose of showcasing the creators programming capabilities for their course in
-        webdevelopment and programming. If you would like to contact the creator and give feedback you can do it here.
+        This project / website was created with the purpose of showcasing the creators programming capabilities for educational purposes.
+        If you would like to contact the creator and give feedback you can do it here.
       </p>
+      <br>
     <form action="https://formspree.io/f/mqakjoay" method="POST">
       <fieldset>
 
-        <label for="email" class="labelEmail">Your email:<input name="email" id="email" class="inputEmail" type="email"></label>
+        <label for="email" class="labelEmail">Your email:</label>
+        <input name="email" id="email" class="inputEmail" type="email">
         <br>
-        <label for="message" class="labelMessage">Enter your message here:<textarea name="message" rows="5"></textarea></label>
+        <label for="message" class="labelMessage">Enter your message here:</label>
+        <textarea name="message" id="message" rows="5"></textarea>
 
       </fieldset>
       <br>
