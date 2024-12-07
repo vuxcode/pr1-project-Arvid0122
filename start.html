@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>The program</title>
+    <meta charset="UTF-8">
     <!-- link to the style.css file controlling the general design-->
     <link href="style.css" rel="stylesheet">
     <style>
+        .goodluck {
+            text-align: center;
+            display: block;
+        }
     </style>
 </head>
+
 <body>
+    <!-- Make a menu at the top of the page using header -->
+  <header>
+    <!-- Add navigation links to the menu -->
+    <nav>
+      <!-- Insert the links to all the pages -->
+      <a href="index.html">About</a>
+      <a href="start.html">The Program</a>
+      <a href="contact-page.html">Contact</a>
+    </nav>
+  </header>
     <main>
-        </main>
-            <header>
-                <nav>
-                  <a href="index.html">About</a>
-                  <a href="start.html">The Program</a>
-                  <a href="contact-page.html">Contact</a>
-                </nav>
-            </header>
-    
-            <section>
-            <h1 class="title">Try the program</h1>
-            <p style="font-size: 19px;">How to play:</p>
-            <p>
-                The computer will show a letter on the screen for half a second.
-                The goal is to press the same letter, resulting in you getting a score.
-                The goal is to press the same letter, resulting in you getting a score.
-                If you do not press the same key you will instead lose a point.
-                You will have 30 seconds to try and achieve the highest score possible.
-                Once you click the start button below the program will immediately start.
-                Good luck!
-            </p>
+
+        <section>
+        <h1 class="title">Try the program</h1>
+        <p style="font-size: 19px;">How to play:</p>
+        <p>
+            The computer will show a letter on the screen for half a second. The goal is to press the same letter,
+            resulting in the player getting a point. If the user does not press the same key they will instead lose a point.
+            The game will stop after 30 seconds, during that time the player will attempt to achieve the highest score possible.
+        </p>
+        <p class="goodluck">
+            Click the button below to start the game.
+            <br>
+            Good luck!
+        </p>
         <!-- Add button that start the program when clicked -->
-        <button class="input2" onClick="start()">START</button>
+        <button class="input2" onClick="start()" aria-label="start game">START</button>
         <!-- For the button to work we need to create a function in javascript -->
         <script>
             function start() {
