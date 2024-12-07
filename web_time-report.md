@@ -63,3 +63,4 @@
   - Updated the text written on the site
   - Wrote comments explaining the code
   - Validated some code
+  - Cleaned up the copycat program code
