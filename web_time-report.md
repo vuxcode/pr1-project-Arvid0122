@@ -56,3 +56,10 @@
   - Started working on making everything accesible
   - Started adding comments to each file
   - Signed up for formspree making the contact page work as intended
+
+- 2024-12-07 worked for ca 3 hours total
+  - Finalized the design for the site
+  - Made sure everything was semantically correct
+  - Updated the text written on the site
+  - Wrote comments explaining the code
+  - Validated some code
