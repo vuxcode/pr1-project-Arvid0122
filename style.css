@@ -7,14 +7,11 @@
   padding: 0px;
   box-sizing: border-box;
 }
-/* @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap'); */
 
 /* Change the font for everything in the body and change the background color */
 body {
-  /* font-family: 'Lora', serif; */
   font-family: 'Rubik', sans-serif;
   background-color: aliceblue;
-  /* background: linear-gradient(to bottom, rgb(69, 88, 212) 60%, rgb(202, 208, 212) 190%); */
 }
 
 header {
@@ -35,7 +32,11 @@ a {
 }  
 
 a:hover {
-  color:rgb(27, 255, 137);
+  color:rgb(151, 255, 201);
+}
+
+a:active {
+  color: rgb(60, 255, 154);
 }
 
 nav {
@@ -51,7 +52,7 @@ p {
 }
 
 .title {
-  margin: 10px auto;
+  margin: auto;
   font-size: 22px;
   text-align: center;
 }
@@ -92,7 +93,7 @@ img {
   width: 100%;
   max-width: 800px;
   height: auto;
-  margin: 20px auto;
+  margin: 0px auto 20px;
   border-radius: 8px;
   display: block;
 }
