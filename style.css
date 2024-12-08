@@ -11,7 +11,7 @@
 /* Change the font for everything in the body and change the background color */
 body {
   font-family: 'Rubik', sans-serif;
-  background-color: aliceblue;
+  background-color: rgb(224, 241, 255);
 }
 
 header {
@@ -32,7 +32,7 @@ a {
 }  
 
 a:hover {
-  color:rgb(151, 255, 201);
+  color:rgb(0, 255, 123);
 }
 
 a:active {
@@ -82,6 +82,10 @@ section {
 
 .input2:hover {
   background-color: rgb(27, 255, 137);
+}
+
+.input2:active {
+  background-color: rgb(0, 239, 116);
 }
 
 main {
