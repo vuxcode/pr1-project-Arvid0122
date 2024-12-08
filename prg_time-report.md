@@ -38,3 +38,8 @@
 - 2024-12-01 worked for ca 1 hour.
   - Added the top menu of the website to the program to make it feel like its a part of the site.
   - Fixed the game over screen. No longer uses document.write which replaced everything on screen.
+
+- 2024-12-08 worked for ca 2 hours total.
+  - Wrote the last comments in the code
+  - cleaned up the code made the finishing touches
+  - Wrote the project summary
