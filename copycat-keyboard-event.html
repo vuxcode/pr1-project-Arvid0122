@@ -56,148 +56,146 @@
             }
         </style>
     </head>
-<body>
-    <!-- Make a menu at the top of the page using header -->
-    <header>
-        <!-- Add navigation links to the menu -->
-        <nav>
-          <!-- Insert the links to all the pages -->
-          <a href="index.html">About</a>
-          <a href="start.html">The Program</a>
-          <a href="contact-page.html">Contact</a>
-        </nav>
-    </header>
+    <body>
+        <!-- Make a menu at the top of the page using header -->
+        <header>
+            <!-- Insert the links to all the pages-->
+            <nav>
+                <a href="index.html">About</a>
+                <a href="start.html">The Program</a>
+                <a href="contact-page.html">Contact</a>
+            </nav>
+        </header>
 
-<!-- Make a section to create the "play area" -->
-<section>
-<!-- Create text paragraph with id and class -->
-<h1 id="message" class="computerSays"> Press:</h1>
-
-<!-- Create a div to change the css of this paragraph specifically -->
-<div class="compSays">
-    <p id="key" style="font-size: 25px"></p>
-</div>
-
-<!-- Create a div to contain the score and timer -->
-<div class="timeScore">
-    <p id="counter">Time left: 30</p>
-    <p id="score">Score: 0</p>
-</div>
-
-<!-- Paragraph for the game over text -->
-<p id="gameOverText" class="gameOverText"></p>
-
-<!-- Paragraph for the final score text -->
-<p id="finalScore" class="finalScore"></p>
-
-<!-- Add button to reset/play again -->
-<button id="playAgain" class="input2" onclick="start()">RESET</button>
-</section>
-
-<script>
-    // Create variables to store the score
-    var score = 0;
-    var scoreText = document.getElementById("score");
-    scoreText.textContent = "Score: " + score;
-
-    // Create variables for the countdown
-    var intervalCounter = setInterval(timerTotal, 1000);
-    var indexCounter = 30;
-    
-    // Create a timer for the "game over" screen
-    var timeoutGameOver = setTimeout(gameOver,30000);
-
-    // Create an array with all possible keys
-    var buttons = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X",
-    "Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-    //var buttons = ["L","l","I","i"]
-
-    // Create variables to be used when generating the "correct key"
-    var random = 0;
-    var correctButton = null;
-    var timerKey;
-
-    // Function that starts the program
-    function start() {
-        window.location.href = "copycat-keyboard-event.html";
-    }
-
-    // Function for the countdown displaying how much time is left
-    function timerTotal() {
-        indexCounter--;
-        counter.textContent = "Time left: " + indexCounter;
-        if (indexCounter == 0) {
-            clearInterval(intervalCounter);
-        }
-    }
-
-    // Function for the "game over" screen
-    function gameOver() {
-            gameOverText.innerHTML = "Game over";
-            finalScore.innerHTML = "Your score: " + score;
-            message.textContent = "";
-            scoreText.textContent = "";
-            counter.textContent = "";
-            window.removeEventListener("keyup", whichKey);
-            playAgain.textContent = "PLAY AGAIN"
-        }
+        <!-- Make a section to create the "play area" -->
+        <section>
+            <!-- Text element with id and class -->
+            <h1 id="message" class="computerSays"> Press:</h1>
+            
+            <!-- Create a div to change the css of this paragraph specifically -->
+            <div class="compSays">
+                <p id="key" style="font-size: 25px"></p>
+            </div>
         
-    // Event listener that registers what key is released and runs the whichKey function
-    window.addEventListener("keyup",whichKey)
-    
-    // The function that runs when a key is released
-    function whichKey (event,id) {
-        if (buttons.includes(event.key)) {
-            if(correctButton == event.key) {
-                plusScore();
+            <!-- Create a div to contain the score and timer -->
+            <div class="timeScore">
+                <p id="counter">Time left: 30</p>
+                <p id="score">Score: 0</p>
+            </div>
+        
+            <!-- Paragraph for the game over text -->
+            <p id="gameOverText" class="gameOverText"></p>
+        
+            <!-- Paragraph for the final score text -->
+            <p id="finalScore" class="finalScore"></p>
+        
+            <!-- Add button to reset/play again -->
+            <button id="playAgain" class="input2" onclick="start()">RESET</button>
+        </section>
+
+        <script>
+            // Create variables to store the score
+            var score = 0;
+            var scoreText = document.getElementById("score");
+            scoreText.textContent = "Score: " + score;
+
+            // Create variables for the countdown
+            var intervalCounter = setInterval(timerTotal, 1000);
+            var indexCounter = 30;
+
+            // Create a timer for the "game over" screen
+            var timeoutGameOver = setTimeout(gameOver,30000);
+
+            // Create an array with all possible keys
+            var buttons = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X",
+            "Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+            // Create variables to be used when generating the "correct key"
+            var random = 0;
+            var correctButton = null;
+            var timerKey;
+
+            // Function that starts the program
+            function start() {
+                window.location.href = "copycat-keyboard-event.html";
             }
-            else {
-                score--
+
+            // Function for the countdown displaying how much time is left
+            function timerTotal() {
+                indexCounter--;
+                counter.textContent = "Time left: " + indexCounter;
+                if (indexCounter == 0) {
+                    clearInterval(intervalCounter);
+                }
+            }
+
+            // Function for the "game over" screen
+            function gameOver() {
+                    gameOverText.innerHTML = "Game over";
+                    finalScore.innerHTML = "Your score: " + score;
+                    message.textContent = "";
+                    scoreText.textContent = "";
+                    counter.textContent = "";
+                    window.removeEventListener("keyup", whichKey);
+                    playAgain.textContent = "PLAY AGAIN"
+                }
+
+            // Event listener that registers what key is released and runs the whichKey function
+            window.addEventListener("keyup",whichKey)
+
+            // The function that runs when a key is released
+            function whichKey (event) {
+                if (buttons.includes(event.key)) {
+                    if(correctButton == event.key) {
+                        plusScore();
+                    }
+                    else {
+                        score--
+                        scoreText.textContent = "Score: " + score;
+                    }
+                    reset();
+                }
+            }
+
+            // Function for displaying the correct key
+            function computerShow() {
+                random = Math.floor(Math.random()*52)
+                correctButton = buttons[random];
+                key.textContent = buttons[random];
+                timerHide();
+            }
+
+            // Function for starting the function that hides the key
+            function timerHide() {
+                timerKey = setTimeout(hide,500);
+            }
+
+            // Function for hiding correct key
+            function hide() {
+                key.style.display = "none";
+            }
+
+            // Function for resetting the correct key and generating a new one
+            function reset() {
+                show();
+                clearTimeout(timerKey);
+                correctButton = null;
+                computerShow();
+            }
+
+            // Function showing the correct key
+            function show() {
+                key.style.display = "block";
+            }
+
+            // Function for increasing score
+            function plusScore() {
+                score++;
                 scoreText.textContent = "Score: " + score;
             }
-            reset();
-        }
-    }
 
-    // Function for displaying the correct key
-    function computerShow() {
-        random = Math.round(Math.random()*50)
-        correctButton = buttons[random];
-        key.textContent = buttons[random];
-        timerHide();
-    }
-
-    // Function controlling the function that hides the key
-    function timerHide() {
-        timerKey = setTimeout(hide,500);
-    }
-
-    // Function for hiding correct key
-    function hide() {
-        key.style.display = "none";
-    }
-
-    // Function for resetting the correct key
-    function reset() {
-        show();
-        clearTimeout(timerKey);
-        correctButton = null;
-        computerShow();
-    }
-
-    // Function showing the correct key
-    function show() {
-        key.style.display = "block";
-    }
-
-    // Function for increasing score
-    function plusScore() {
-        score++;
-        scoreText.textContent = "Score: " + score;
-    }
-
-    // When the program starts this function will immediately run, starting the game
-    computerShow();
-</script>
-</body>
+            // When the program starts this function will immediately run, starting the game
+            computerShow();
+        </script>
+    </body>
 </html>
