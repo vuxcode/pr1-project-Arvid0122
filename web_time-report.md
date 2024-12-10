@@ -64,3 +64,9 @@
   - Wrote comments explaining the code
   - Validated some code
   - Cleaned up the copycat program code
+ 
+- 2024-12-10 worked for ca 3 hours total
+  - Made the last minor tweaks
+  - Added the last images and logo
+  - Validated everything
+  - Fixed indentation
