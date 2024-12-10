@@ -57,20 +57,20 @@
     .input2 {
       margin: 33px auto 10px;
     }
-    
   </style>
 </head>
 
 <body>
   <header>
+    <!-- Insert the links to all the pages-->
     <nav>
+      <img src="copycat-logo.png" class="logo" alt="copycat logo">
       <a href="index.html">About</a>
-      <a href="start.html" aria-current="page">The Program</a>
+      <a href="start.html">The Program</a>
       <a href="contact-page.html">Contact</a>
     </nav>
-  </header>
+</header>
   <main>
-
     <section>
       <h1 class="title">Contact the creator</h1>
       <p>
@@ -78,20 +78,18 @@
         If you would like to contact the creator and give feedback you can do it here.
       </p>
       <br>
-    <form action="https://formspree.io/f/mqakjoay" method="POST">
-      <fieldset>
-
-        <label for="email" class="labelEmail">Your email:</label>
-        <input name="email" id="email" class="inputEmail" type="email">
+      <form action="https://formspree.io/f/mqakjoay" method="POST">
+        <fieldset>
+          <label for="email" class="labelEmail">Your email:</label>
+          <input name="email" id="email" class="inputEmail" type="email">
+          <br>
+          <label for="message" class="labelMessage">Enter your message here:</label>
+          <textarea name="message" id="message" rows="5"></textarea>
+        </fieldset>
         <br>
-        <label for="message" class="labelMessage">Enter your message here:</label>
-        <textarea name="message" id="message" rows="5"></textarea>
-
-      </fieldset>
-      <br>
-      <input class="input2" type="submit" value="Send">
-    </form>
-  </section>
+        <input class="input2" type="submit" value="Send">
+      </form>
+    </section>
   </main>
 </body>
 </html>
