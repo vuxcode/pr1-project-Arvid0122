@@ -5,21 +5,29 @@
   <title>About</title>
   <!-- link to the style.css file controlling the general design-->
   <link href="style.css" rel="stylesheet">
+  <style>
+    p {
+      margin: 10px auto -3px;
+    }
+    .lastImage {
+      margin: 7px auto -1px;
+    }
+  </style>
 </head>
 
 <body>
   <!-- Make a menu at the top of the page using header -->
   <header>
-    <!-- Add navigation links to the menu -->
+    <!-- Insert the links to all the pages-->
     <nav>
-      <!-- Insert the links to all the pages -->
+      <img src="copycat-logo.png" class="logo" alt="copycat logo">
       <a href="index.html">About</a>
       <a href="start.html">The Program</a>
       <a href="contact-page.html">Contact</a>
     </nav>
   </header>
+  
   <main>
-
     <!-- Divide parts of the site into sections -->
     <section>
       <h1 class="title">Copycat</h1>
@@ -28,7 +36,6 @@
         On this page you can learn more about how the program was built and follow the process from the start.
       </p>
     </section>
-
     <section>
       <h1 class="title">The process</h1>
       <p>
@@ -42,14 +49,12 @@
       <!-- Insert image and add an alt attribute for accesibility -->
       <img src="prg_major_project_planning_flowchart.drawio.svg" alt="flowchart explaining how the program will work">
       <p>This is my time report, showing when I have worked and what I have done:</p>
-
       <img src="time-report-page1-cropped.png" alt="time report on the project">
-      <p>
-        This is my bug list, where I have documented all major problems I have faced and how I have solved them.
-      </p>
-      <img src="">
+      <img src="time-report-page2-cropped.png" alt="time report page 2">
+      <img src="time-report-page3-cropped.png" alt="time report page 3">
+      <p>This is my bug list, where I have documented the problems I have faced and how I have solved them:</p>
+      <img src="bug-list-cropped.png" class="lastImage" alt="bug list">
     </section>
-
   </main>
 </body>
 </html>
